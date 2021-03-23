@@ -613,7 +613,8 @@ MainLoop:
 					case 1:
 						// Couldn't id autoEquip item. Don't log it.
 						if (result.result === 1 && Config.AutoEquip && !item.getFlag(0x10) && Item.autoEquipCheck(item)) {
-							break;
+							//lets log even these
+							//break;
 						}
 
 						Misc.itemLogger("Kept", item);
@@ -631,11 +632,13 @@ MainLoop:
 						break;
 					case 5: // Crafting System
 						Misc.itemLogger("Kept", item, "CraftSys-Town");
+						Misc.logItem("Kept", item, 'log');
 						CraftingSystem.update(item);
 
 						break;
 					default:
 						Misc.itemLogger("Sold", item);
+						Misc.logItem("Kept", item, 'log');
 						item.sell();
 
 						timer = getTickCount() - this.sellTimer; // shop speedup test

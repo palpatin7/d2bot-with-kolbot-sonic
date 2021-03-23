@@ -1488,10 +1488,11 @@ var Misc = {
 	useItemLog: true, // Might be a bit dirty
 
 	itemLogger: function (action, unit, text) {
+		
 		if (!Config.ItemInfo || !this.useItemLog) {
 			return false;
 		}
-
+		
 		var desc,
 			date = new Date(),
 			h = date.getHours(),
@@ -1528,7 +1529,7 @@ var Misc = {
 			break;
 		}
 
-		return this.fileAction("logs/ItemLog.txt", 2, dateString + " <" + me.profile + "> <" + action + "> (" + Pickit.itemQualityToName(unit.quality) + ") " + desc + (text ? " {" + text + "}" : "") + "\n");
+		return this.fileAction("logs/ItemLog.txt", 2, dateString + " <" + me.profile + "> <" + action + "> (" + Pickit.itemQualityToName(unit.quality) + ") " + desc + (text ? " {" + text + "}" : "") + " |" + DataFile.getStats().lastArea + "\n");
 	},
 
 	// Log kept item stats in the manager.

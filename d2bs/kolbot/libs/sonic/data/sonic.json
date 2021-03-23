@@ -1,0 +1,14 @@
+{
+  "account": "huf61v5vxq9pk3k",
+  "password": "passwordy",
+  "charName": "bwtqymsfkrfdhvr",
+  "realm": "europe",
+  "ladder": true,
+  "expansion": true,
+  "hardcore": false,
+  "respecLevel": 24,
+  "beforeRespecBuild": "start",
+  "afterRespecbuild": "xblizzard",
+  "charClass": "sorceress",
+  "difficulty": "Normal"
+}
